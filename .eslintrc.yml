@@ -1,0 +1,14 @@
+root: true
+extends:
+    - airbnb-base
+    - plugin:react/recommended
+env:
+    browser: true
+parser: 'babel-eslint'
+plugins:
+    - react
+    - import
+rules:
+    indent: ["error", 2]
+    import/prefer-default-export: ["off"]
+    prefer-arrow-callback: ["off"]
