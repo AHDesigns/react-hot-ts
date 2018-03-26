@@ -10,21 +10,21 @@ module.exports = () => ({
   },
   module: {
     rules: [
-      // {
-      //   test: /\.jsx$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       babelrc: false,
-      //       presets: ['env', 'react'],
-      //       plugins: ['react-hot-loader/babel', 'transform-class-properties'],
-      //     },
-      //   },
-      // },
       {
         test: /\.tsx?$/,
-        use: ['babel-loader', 'awesome-typescript-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              presets: ["env", "react"],
+              plugins: ["react-hot-loader/babel", "transform-class-properties"],
+            }
+          },
+          {
+            loader: 'awesome-typescript-loader',
+          },
+        ],
       },
     ],
   },

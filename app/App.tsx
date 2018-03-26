@@ -3,9 +3,9 @@ import { hot } from 'react-hot-loader';
 
 const App = () => (
   <h1>
-    Hello, iwy.<br />
+    Hello, you.<br />
   </h1>
 )
+console.log('chuffty');
 
-// export default App
 export default hot(module)(App)
