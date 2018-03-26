@@ -8,6 +8,12 @@ module.exports = () => ({
     filename: 'bundle.js',
     path: resolve('dist'),
   },
+  devServer: {
+    port: 3000,
+    proxy: {
+      "/api": "http://localhost:2000"
+    },
+  },
   module: {
     rules: [
       {
